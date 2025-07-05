@@ -1,0 +1,16 @@
+note to author:
+make a python code programmed for detecting recent updates made on computer and note&upgrade them
+then by a choice of will supported with GUI, let user decide to enable it's automation or not.
+
+note to user:
+i know most UNIX/Win systems already has that kind of automation, this code is fully made for learning purposes
+feel free to use it or not
+
+
+WARNING: I tried it after a day. Opened my computer and... it kind of
+came out freaky. Can't say it doesn't work, but it's definitely not perfect.
+Because the program itself opens at the same time with system, the creepy gui right into your face, not the function itself.
+
+And the thing is, i don't even remember how the damn code works.
+Have fun using/fixing it if you have any of those intentions.
+
