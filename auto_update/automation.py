@@ -28,7 +28,6 @@ class UpdateManagement:
 
         
     def run_sudo_command(self, command, password):
-        # get password 
         try:
             process = subprocess.Popen(['sudo', '-S'] + command.split(),
                                        stdin=subprocess.PIPE,
