@@ -35,7 +35,6 @@ class UpdateManagement:
                                        stdout=subprocess.PIPE,
                                        stderr=subprocess.STDOUT,
                                        text=True)
-            # Send password followed by newline
             stdout, _ = process.communicate(password + '\n')
             self.text_output.insert(tk.END, stdout)
             self.text_output.see(tk.END)
@@ -45,7 +44,6 @@ class UpdateManagement:
 
     
     def update(self):
-        # run command with given password
         self.text_output.insert(tk.END, "[$] Starting update process...\n")
 
         password = simpledialog.askstring("Authentication Required",
@@ -67,7 +65,7 @@ class UpdateManagement:
         threading.Thread(target=self.update, daemon=True).start()
  
     def automation(self):   
-        # (!) This is where code is enabled to the SYSTEM itself. (!)
+        # i used automatic root privillege here, you can adjust this part a little. It uses sudo/root 
         self.text_output.insert(tk.END, "[*] Enable button clicked. Trying to run script...\n")
 
         self.script_path = os.path.abspath("./startpy.sh")
@@ -116,15 +114,15 @@ class UpdateManagement:
         
 
 
-        # Terminal output display
+        # terminal output
         self.text_output = scrolledtext.ScrolledText(self.root, height=10, width=80)
         self.text_output.pack(pady=10)
 
-        # Buttons
+        # buttons
         ttk.Button(self.root, text="Run Update", command=self.start_update_thread).pack(pady=5)
 
 
-        # Optional: second window (currently just a button that opens a placeholder window)
+        ##
         ttk.Button(self.root, text="Settings", command=self.new_window).pack(pady=20)
 
     def new_window(self):
