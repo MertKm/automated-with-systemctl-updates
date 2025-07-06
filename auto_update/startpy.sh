@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SERVICE_NAME="mypythonservice"
+SERVICE_NAME="updatemanagementpy"
 PYTHON_SCRIPT_PATH="/home/$(whoami)/Desktop/auto_update/automation.py"
 SERVICE_DIR="$HOME/.config/systemd/user"
 SERVICE_FILE="${SERVICE_DIR}/${SERVICE_NAME}.service"
